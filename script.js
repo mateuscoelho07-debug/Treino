@@ -57,9 +57,13 @@ fotoGrande.addEventListener("click", () => {
   document.body.appendChild(fundo);
 });
 
-/* ===== CARTÕES QUE VIRAM (toque no celular) ===== */
+/* ===== CARTÕES QUE VIRAM =====
+   Tocar (ou clicar) vira o cartão. Tocar de novo desvira. */
 document.querySelectorAll(".cartao").forEach((cartao) => {
-  cartao.addEventListener("click", () => cartao.classList.toggle("virado"));
+  cartao.addEventListener("click", () => {
+    const virado = cartao.classList.toggle("virado");
+    cartao.setAttribute("aria-pressed", virado);
+  });
 });
 
 /* ===== ABAS: MANHOSO / EVA / ANTENA ===== */
@@ -303,7 +307,7 @@ const observador = new IntersectionObserver((entradas) => {
   });
 }, { threshold: 0.15 });
 
-document.querySelectorAll(".secao h2, .produto, .passos, .simulador, .quiz, .compra, .faq").forEach((el) => {
+document.querySelectorAll(".secao h2, .produto, .passos, .specs-grade, .simulador, .quiz, .compra, .faq").forEach((el) => {
   el.classList.add("surgir");
   observador.observe(el);
 });
