@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicoteiro | Suporte para manhoso, EVA e antena</title>
+  <meta name="description" content="Chicoteiro: o suporte que guarda seus manhosos montados, sem embolar a linha. Dicas de pesca com manhoso, EVA e antena.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== MENU DO TOPO ===== -->
+  <header class="topo">
+    <a href="#inicio" class="logo">Chicoteiro</a>
+    <button class="menu-botao" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="menu">
+      <a href="#produto">O produto</a>
+      <a href="#tecnicas">Técnicas</a>
+      <a href="#quiz">Qual montagem?</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#comprar" class="menu-comprar">Comprar</a>
+    </nav>
+  </header>
+
+  <!-- ===== CAPA (HERO) ===== -->
+  <section id="inicio" class="hero">
+    <div class="hero-texto">
+      <p class="etiqueta">Para quem pesca de manhoso</p>
+      <h1>Seu chicote montado, <span>pronto e sem embolar.</span></h1>
+      <p>O <strong>Chicoteiro</strong> guarda o manhoso já montado, com EVA e anzóis no lugar. Chegou no pesqueiro, é só desenrolar e arremessar.</p>
+      <div class="hero-botoes">
+        <a href="#comprar" class="botao botao-principal">Quero o meu</a>
+        <a href="#produto" class="botao botao-secundario">Como funciona</a>
+      </div>
+    </div>
+    <div class="hero-foto">
+      <img src="img/chicoteiro-no-pesqueiro.jpg" alt="Chicoteiro azul com um manhoso montado, encostado num poste de madeira na beira do lago">
+    </div>
+    <!-- Ondas animadas no rodapé da capa -->
+    <svg class="ondas" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path class="onda onda-1" d="M0,60 C240,110 480,10 720,60 C960,110 1200,10 1440,60 L1440,120 L0,120 Z"/>
+      <path class="onda onda-2" d="M0,80 C240,40 480,120 720,80 C960,40 1200,120 1440,80 L1440,120 L0,120 Z"/>
+    </svg>
+  </section>
+
+  <!-- ===== O PRODUTO ===== -->
+  <section id="produto" class="secao">
+    <h2>Conheça o Chicoteiro</h2>
+    <p class="subtitulo">Clique nas fotos para ver maior.</p>
+
+    <div class="produto">
+      <div class="galeria">
+        <img id="foto-grande" src="img/chicoteiro-frente.jpg" alt="Chicoteiro azul visto de frente">
+        <div class="miniaturas">
+          <button class="miniatura ativa" data-foto="img/chicoteiro-frente.jpg" data-alt="Chicoteiro azul visto de frente">
+            <img src="img/chicoteiro-frente.jpg" alt="">
+          </button>
+          <button class="miniatura" data-foto="img/chicoteiro-angulo.jpg" data-alt="Chicoteiro azul visto de lado">
+            <img src="img/chicoteiro-angulo.jpg" alt="">
+          </button>
+          <button class="miniatura" data-foto="img/chicoteiro-no-pesqueiro.jpg" data-alt="Chicoteiro com manhoso montado no pesqueiro">
+            <img src="img/chicoteiro-no-pesqueiro.jpg" alt="">
+          </button>
+        </div>
+      </div>
+
+      <div class="vantagens">
+        <!-- Cada cartão vira quando você passa o mouse (ou toca no celular) -->
+        <div class="cartao" tabindex="0">
+          <div class="cartao-frente"><span class="icone">🪝</span><h3>Nada de embolar</h3></div>
+          <div class="cartao-verso"><p>A linha fica enrolada no corpo do suporte e os anzóis ficam no vão do meio, separados.</p></div>
+        </div>
+        <div class="cartao" tabindex="0">
+          <div class="cartao-frente"><span class="icone">✂️</span><h3>Travas laterais</h3></div>
+          <div class="cartao-verso"><p>Os cortes nas laterais prendem a ponta da linha para ela não soltar na caixa.</p></div>
+        </div>
+        <div class="cartao" tabindex="0">
+          <div class="cartao-frente"><span class="icone">⏱️</span><h3>Mais tempo pescando</h3></div>
+          <div class="cartao-verso"><p>Monte em casa com calma. No pesqueiro é só trocar o chicote e voltar para a água.</p></div>
+        </div>
+        <div class="cartao" tabindex="0">
+          <div class="cartao-frente"><span class="icone">🎒</span><h3>Fino e leve</h3></div>
+          <div class="cartao-verso"><p>Cabe na caixa de pesca ou no bolso. Leve vários chicotes prontos.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Passo a passo -->
+    <h3 class="titulo-passos">Como usar em 3 passos</h3>
+    <ol class="passos">
+      <li><span>1</span><p>Coloque o manhoso no vão do meio, com os EVAs e anzóis acomodados.</p></li>
+      <li><span>2</span><p>Enrole a linha em volta do suporte, passando pelos encaixes de cima e de baixo.</p></li>
+      <li><span>3</span><p>Prenda a ponta numa das travas laterais. Pronto, é só guardar.</p></li>
+    </ol>
+  </section>
+
+  <!-- ===== TÉCNICAS (ABAS) ===== -->
+  <section id="tecnicas" class="secao secao-escura">
+    <h2>Pesca com manhoso, EVA e antena</h2>
+    <p class="subtitulo">Escolha uma aba para ver as dicas.</p>
+
+    <div class="abas" role="tablist">
+      <button class="aba ativa" role="tab" data-aba="manhoso">Manhoso</button>
+      <button class="aba" role="tab" data-aba="eva">EVA</button>
+      <button class="aba" role="tab" data-aba="antena">Antena</button>
+    </div>
+
+    <div class="aba-conteudo ativo" id="aba-manhoso" role="tabpanel">
+      <h3>O que é o manhoso</h3>
+      <p>É um chicote com vários anzóis em pernadas curtas, presos perto da isca de massa. O peixe vem comer a massa e acaba fisgado em um dos anzóis. Muito usado em pesqueiro para tilápia, pacu, tambaqui e carpa.</p>
+      <ul>
+        <li>Capriche na massa: ela precisa durar na água, sem desmanchar logo.</li>
+        <li>Pernadas curtas ajudam os anzóis a ficarem perto da isca.</li>
+        <li>Confira os nós antes de arremessar. Um chicote guardado no Chicoteiro chega inteiro.</li>
+      </ul>
+    </div>
+
+    <div class="aba-conteudo" id="aba-eva" role="tabpanel">
+      <h3>Para que serve o EVA</h3>
+      <p>As bolinhas ou cilindros de EVA flutuam. Colocados nas pernadas, eles fazem os anzóis subirem um pouco e ficarem soltos em volta da massa, em vez de deitarem no fundo.</p>
+      <ul>
+        <li>EVA maior dá mais flutuação; menor deixa o anzol mais discreto.</li>
+        <li>Teste no balde ou na beira para ver como os anzóis ficam na água.</li>
+        <li>EVA amassado perde flutuação: troque quando estiver gasto.</li>
+      </ul>
+    </div>
+
+    <div class="aba-conteudo" id="aba-antena" role="tabpanel">
+      <h3>Pescando com antena</h3>
+      <p>A antena é uma boia comprida que fica em pé na água e mostra qualquer mexida do peixe. Ela ajuda a ver a beliscada e a hora de fisgar.</p>
+      <ul>
+        <li>Regule a profundidade para a isca ficar onde o peixe está comendo.</li>
+        <li>Antena afundando ou deitando de vez: hora de fisgar.</li>
+        <li>Pequenos toques na antena costumam ser o peixe testando a isca. Tenha calma.</li>
+      </ul>
+    </div>
+
+    <!-- Simulador de antena: clique na água para "fisgar" -->
+    <div class="simulador">
+      <h3>Treine a fisgada</h3>
+      <p>Observe a antena. Quando ela <strong>afundar</strong>, clique no botão "Fisgar!". Se clicar cedo demais, o peixe foge.</p>
+      <div class="lago" aria-hidden="true">
+        <div class="antena" id="antena"><div class="antena-ponta"></div></div>
+      </div>
+      <div class="simulador-controles">
+        <button class="botao botao-principal" id="botao-fisgar">Começar</button>
+        <p id="placar">Peixes: 0 · Escaparam: 0</p>
+      </div>
+      <p class="simulador-mensagem" id="mensagem-simulador" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ ===== -->
+  <section id="quiz" class="secao">
+    <h2>Qual montagem combina com você?</h2>
+    <p class="subtitulo">Responda 3 perguntas rápidas.</p>
+    <div class="quiz" id="quiz-caixa">
+      <!-- O JavaScript desenha as perguntas aqui -->
+    </div>
+  </section>
+
+  <!-- ===== COMPRAR ===== -->
+  <section id="comprar" class="secao secao-destaque">
+    <h2>Garanta o seu Chicoteiro</h2>
+    <div class="compra">
+      <img src="img/chicoteiro-angulo.jpg" alt="Chicoteiro azul">
+      <div class="compra-info">
+        <p class="preco" id="preco-unitario">R$ 0,00</p>
+        <p class="preco-legenda">por unidade</p>
+
+        <label for="quantidade">Quantidade</label>
+        <div class="quantidade">
+          <button type="button" id="menos" aria-label="Diminuir quantidade">−</button>
+          <input type="number" id="quantidade" value="1" min="1" max="50">
+          <button type="button" id="mais" aria-label="Aumentar quantidade">+</button>
+        </div>
+        <p class="desconto" id="desconto"></p>
+        <p class="total">Total: <strong id="total">R$ 0,00</strong></p>
+
+        <a href="#" id="botao-whatsapp" class="botao botao-whatsapp" target="_blank" rel="noopener">Comprar pelo WhatsApp</a>
+        <p class="pequeno">Você será levado para uma conversa no WhatsApp com o pedido já escrito.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DÚVIDAS (FAQ) ===== -->
+  <section id="faq" class="secao">
+    <h2>Dúvidas frequentes</h2>
+    <div class="faq">
+      <details>
+        <summary>Cabe qualquer manhoso?</summary>
+        <p>Ele foi feito para chicotes de manhoso com EVA, como o da foto. Montagens muito grandes podem ficar apertadas no vão do meio.</p>
+      </details>
+      <details>
+        <summary>Posso guardar mais de um chicote no mesmo suporte?</summary>
+        <p>O ideal é um chicote por suporte, para nada embolar. Por isso vale a pena levar alguns.</p>
+      </details>
+      <details>
+        <summary>Molhar estraga?</summary>
+        <p>Não. Depois de pescar, é só deixar secar antes de guardar de volta na caixa.</p>
+      </details>
+      <details>
+        <summary>Como faço o pedido?</summary>
+        <p>Escolha a quantidade e clique em "Comprar pelo WhatsApp". A conversa abre com o pedido pronto, e combinamos pagamento e entrega por lá.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <p><strong>Chicoteiro</strong> · Feito por quem pesca, para quem pesca.</p>
+  </footer>
+
+  <!-- Botão que aparece quando você desce a página -->
+  <button class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
