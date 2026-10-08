@@ -79,8 +79,8 @@ abas.forEach((aba) => {
   });
 });
 
-/* ===== SIMULADOR DE ANTENA =====
-   A antena boia parada, dá umas beliscadas e depois afunda.
+/* ===== SIMULADOR DE BOIA =====
+   A boia fica parada, dá umas beliscadas e depois afunda.
    Se você clicar em "Fisgar!" enquanto ela está afundada, pegou o peixe. */
 const antena = document.getElementById("antena");
 const botaoFisgar = document.getElementById("botao-fisgar");
@@ -154,52 +154,52 @@ mudarAntena("parada");
 /* ===== QUIZ ===== */
 const perguntas = [
   {
-    texto: "Onde você mais pesca?",
+    texto: "Quantos chicotes você costuma levar numa pescaria?",
     opcoes: [
-      { texto: "Pesqueiro, com peixe acostumado a massa", ponto: "eva" },
-      { texto: "Lago ou represa, com peixe no fundo", ponto: "manhoso" },
-      { texto: "Beira de barranco, água mais rasa", ponto: "antena" },
+      { texto: "Só 1 ou 2", ponto: "um" },
+      { texto: "De 3 a 4", ponto: "tres" },
+      { texto: "5 ou mais", ponto: "cinco" },
     ],
   },
   {
-    texto: "Que peixe você quer pegar?",
+    texto: "Você gosta de deixar chicotes montados com antecedência?",
     opcoes: [
-      { texto: "Tilápia", ponto: "eva" },
-      { texto: "Pacu, tambaqui ou carpa", ponto: "manhoso" },
-      { texto: "Lambari e peixes menores", ponto: "antena" },
+      { texto: "Não, monto na hora", ponto: "um" },
+      { texto: "Às vezes, alguns", ponto: "tres" },
+      { texto: "Sempre, levo tudo pronto", ponto: "cinco" },
     ],
   },
   {
-    texto: "Como você gosta de pescar?",
+    texto: "Você troca de antena (formato ou cor) durante a pescaria?",
     opcoes: [
-      { texto: "Arremessar e esperar a vara envergar", ponto: "manhoso" },
-      { texto: "Com os anzóis bem soltos em volta da massa", ponto: "eva" },
-      { texto: "Olhando a boia e fisgando na hora certa", ponto: "antena" },
+      { texto: "Quase nunca", ponto: "um" },
+      { texto: "De vez em quando", ponto: "tres" },
+      { texto: "Toda hora, vou testando", ponto: "cinco" },
     ],
   },
 ];
 
 const resultados = {
-  manhoso: {
-    icone: "🪝",
-    titulo: "Manhoso de fundo",
-    texto: "Massa firme, chicote com pernadas curtas e paciência. O Chicoteiro deixa vários prontos para você trocar rápido.",
+  um: {
+    icone: "🎣",
+    titulo: "1 Chicoteiro já resolve",
+    texto: "Você pesca com poucos chicotes. Um Chicoteiro mantém o seu manhoso organizado e sem embolar.",
   },
-  eva: {
-    icone: "🟤",
-    titulo: "Manhoso com EVA",
-    texto: "Os EVAs deixam os anzóis flutuando em volta da massa, perfeito para peixe desconfiado. Guarde no Chicoteiro para os EVAs não amassarem.",
+  tres: {
+    icone: "🧰",
+    titulo: "Kit com 3 Chicoteiros",
+    texto: "Com 3 você deixa chicotes prontos e troca rápido na pescaria. E ainda ganha o desconto de quantidade!",
   },
-  antena: {
-    icone: "🎯",
-    titulo: "Pesca de antena",
-    texto: "Você gosta de ver a beliscada e fisgar na hora. Treine no simulador aqui em cima!",
+  cinco: {
+    icone: "🏆",
+    titulo: "5 ou mais Chicoteiros",
+    texto: "Você leva tudo pronto e testa antenas diferentes. Com vários Chicoteiros, cada chicote fica no seu lugar.",
   },
 };
 
 const quizCaixa = document.getElementById("quiz-caixa");
 let perguntaAtual = 0;
-let pontos = { manhoso: 0, eva: 0, antena: 0 };
+let pontos = { um: 0, tres: 0, cinco: 0 };
 
 function mostrarPergunta() {
   const p = perguntas[perguntaAtual];
@@ -238,14 +238,14 @@ function mostrarResultado() {
       <div class="icone">${r.icone}</div>
       <h3>${r.titulo}</h3>
       <p>${r.texto}</p>
-      <a href="#comprar" class="botao botao-principal">Ver o Chicoteiro</a>
+      <a href="#comprar" class="botao botao-principal">Comprar agora</a>
       <p><button class="quiz-opcao" id="refazer" style="text-align:center">Refazer o quiz</button></p>
     </div>
   `;
 
   document.getElementById("refazer").addEventListener("click", () => {
     perguntaAtual = 0;
-    pontos = { manhoso: 0, eva: 0, antena: 0 };
+    pontos = { um: 0, tres: 0, cinco: 0 };
     mostrarPergunta();
   });
 }
