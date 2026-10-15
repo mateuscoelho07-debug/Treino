@@ -11,7 +11,6 @@
   --texto: #1d2330;
   --texto-claro: #5b6475;
   --branco: #ffffff;
-  --whatsapp: #1fa855;
   --raio: 16px;
   --sombra: 0 10px 30px rgba(15, 31, 92, 0.15);
 }
@@ -135,7 +134,8 @@ h1, h2, h3 { line-height: 1.2; }
 .botao:hover { transform: translateY(-2px); box-shadow: var(--sombra); }
 .botao-principal { background: #ffd23f; color: var(--azul-escuro); }
 .botao-secundario { background: transparent; color: var(--branco); border: 2px solid rgba(255, 255, 255, 0.6); }
-.botao-whatsapp { background: var(--whatsapp); color: var(--branco); width: 100%; text-align: center; margin-top: 18px; }
+.botao-ml { background: #ffe600; color: #2d3277; width: 100%; text-align: center; margin-top: 18px; font-size: 1.1rem; }
+.compra-destaque { font-size: 1.8rem; font-weight: 800; color: #ffd23f; line-height: 1.2; margin-bottom: 10px; }
 
 /* ===== SEÇÕES ===== */
 .secao { padding: 80px 6vw; }

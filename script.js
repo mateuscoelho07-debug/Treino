@@ -1,26 +1,3 @@
-/* =========================================================
-   CONFIGURAÇÃO DA LOJA
-   Mateus: troque estes valores pelos seus de verdade.
-   ========================================================= */
-const CONFIG = {
-  // Número do WhatsApp com DDI 55 + DDD + número, só dígitos.
-  // EXEMPLO: troque pelo seu número.
-  whatsapp: "5511999999999",
-
-  // Preço de uma unidade, em reais. EXEMPLO: troque pelo seu preço.
-  preco: 29.90,
-
-  // A partir de quantas unidades entra o desconto, e de quanto (0.10 = 10%).
-  // EXEMPLO: se não quiser desconto, coloque descontoPercentual: 0
-  descontoAPartirDe: 3,
-  descontoPercentual: 0.10,
-};
-
-// Transforma 29.9 em "R$ 29,90"
-function emReais(valor) {
-  return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-}
-
 /* ===== MENU NO CELULAR ===== */
 const menuBotao = document.querySelector(".menu-botao");
 const menu = document.querySelector(".menu");
@@ -188,7 +165,7 @@ const resultados = {
   tres: {
     icone: "🧰",
     titulo: "Kit com 3 Chicoteiros",
-    texto: "Com 3 você deixa chicotes prontos e troca rápido na pescaria. E ainda ganha o desconto de quantidade!",
+    texto: "Com 3 você deixa chicotes prontos e troca rápido na pescaria. Dá para escolher a quantidade direto no anúncio.",
   },
   cinco: {
     icone: "🏆",
@@ -251,51 +228,6 @@ function mostrarResultado() {
 }
 
 mostrarPergunta();
-
-/* ===== COMPRA: QUANTIDADE, TOTAL E WHATSAPP ===== */
-const campoQuantidade = document.getElementById("quantidade");
-const textoTotal = document.getElementById("total");
-const textoDesconto = document.getElementById("desconto");
-const botaoWhatsapp = document.getElementById("botao-whatsapp");
-
-document.getElementById("preco-unitario").textContent = emReais(CONFIG.preco);
-
-function atualizarCompra() {
-  let qtd = parseInt(campoQuantidade.value, 10);
-  if (isNaN(qtd) || qtd < 1) qtd = 1;
-  if (qtd > 50) qtd = 50;
-  campoQuantidade.value = qtd;
-
-  let total = qtd * CONFIG.preco;
-  const temDesconto = CONFIG.descontoPercentual > 0 && qtd >= CONFIG.descontoAPartirDe;
-
-  if (temDesconto) {
-    total = total * (1 - CONFIG.descontoPercentual);
-    textoDesconto.textContent = `🎉 ${CONFIG.descontoPercentual * 100}% de desconto aplicado!`;
-  } else if (CONFIG.descontoPercentual > 0) {
-    textoDesconto.textContent = `Leve ${CONFIG.descontoAPartirDe} ou mais e ganhe ${CONFIG.descontoPercentual * 100}% de desconto.`;
-  } else {
-    textoDesconto.textContent = "";
-  }
-
-  textoTotal.textContent = emReais(total);
-
-  // Monta a mensagem que já vai escrita no WhatsApp
-  const texto = `Olá! Quero comprar ${qtd} Chicoteiro${qtd > 1 ? "s" : ""}. Total: ${emReais(total)}.`;
-  botaoWhatsapp.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`;
-}
-
-document.getElementById("menos").addEventListener("click", () => {
-  campoQuantidade.value = parseInt(campoQuantidade.value, 10) - 1;
-  atualizarCompra();
-});
-document.getElementById("mais").addEventListener("click", () => {
-  campoQuantidade.value = parseInt(campoQuantidade.value, 10) + 1;
-  atualizarCompra();
-});
-campoQuantidade.addEventListener("change", atualizarCompra);
-
-atualizarCompra();
 
 /* ===== SEÇÕES APARECENDO AO ROLAR A PÁGINA ===== */
 const observador = new IntersectionObserver((entradas) => {
