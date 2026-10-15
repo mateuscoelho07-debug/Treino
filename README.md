@@ -12,16 +12,12 @@ Baixe a pasta e abra o arquivo `index.html` com o navegador (dois cliques nele).
 |---|---|
 | `index.html` | O **conteúdo**: textos, títulos, fotos, botões. |
 | `style.css` | A **aparência**: cores, tamanhos, animações, versão de celular. |
-| `script.js` | O **comportamento**: galeria, abas, simulador de antena, quiz, cálculo do preço e botão do WhatsApp. |
+| `script.js` | O **comportamento**: galeria, abas, simulador de antena, quiz, e botão de compra. |
 | `img/` | As fotos do produto. |
 
-## O que trocar antes de vender
+## Link de compra
 
-Abra `script.js` e mude o bloco `CONFIG` no começo do arquivo:
-
-- `whatsapp`: seu número com 55 + DDD (só números). O que está lá é exemplo.
-- `preco`: o preço de uma unidade. O que está lá (29,90) é exemplo.
-- `descontoAPartirDe` e `descontoPercentual`: desconto por quantidade (exemplo: 10% a partir de 3). Coloque `descontoPercentual: 0` para tirar.
+O botão "Comprar no Mercado Livre" fica em `index.html`, na seção `COMPRAR`. Para trocar o anúncio, cole o novo link dentro do `href="..."` desse botão.
 
 Para mudar as cores, edite as variáveis no começo de `style.css` (`--azul`, `--verde-lago`...).
 
