@@ -19,6 +19,12 @@ Baixe a pasta e abra o arquivo `index.html` com o navegador (dois cliques nele).
 
 O botão "Comprar no Mercado Livre" fica em `index.html`, na seção `COMPRAR`. Para trocar o anúncio, cole o novo link dentro do `href="..."` desse botão.
 
+## Visitas e cliques
+
+As estatísticas do site ficam no painel do GoatCounter: https://speed.goatcounter.com
+
+Lá aparecem as visitas por dia, de onde as pessoas vieram, celular ou computador, e quantas vezes o botão "Comprar no Mercado Livre" foi clicado (procure por `clique-comprar-mercado-livre`).
+
 Para mudar as cores, edite as variáveis no começo de `style.css` (`--azul`, `--verde-lago`...).
 
 ## Publicar de graça no GitHub Pages
